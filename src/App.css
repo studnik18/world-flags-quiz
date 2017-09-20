@@ -23,11 +23,11 @@
   to { transform: rotate(360deg); }
 }
 
-
 .main-container {
+  margin-top: 100px;
   width: 600px;
   height: 400px;
-  margin: auto;
+/*   margin: auto; */
   border: 1px black solid;
 }
 
@@ -46,4 +46,8 @@
 
 #header, #footer {
   height: 75px;
+}
+
+#continents > input {
+  margin-right: 10px;
 }
