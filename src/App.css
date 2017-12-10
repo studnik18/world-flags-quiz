@@ -59,6 +59,13 @@
   width: 50%;
 }
 
+.score-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
 #flag, #answersButtons {
   width: 50%;
   height: 100%;

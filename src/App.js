@@ -33,7 +33,6 @@ class App extends Component {
         this.manageData = this.manageData.bind(this);
         this.handleAnswer = this.handleAnswer.bind(this);
         this.nextClick = this.nextClick.bind(this);
-        this.playAgain = this.playAgain.bind(this);
 
     }
 
@@ -130,8 +129,7 @@ class App extends Component {
             return [numberOne, numberTwo];
     };
 
-    handleAnswer(e) {
-        console.log(e.target.classList[0]);      
+    handleAnswer(e) {   
         document.querySelector('.correct').style.backgroundColor = '#26F539';
         if (e.target.classList[0] !== 'correct') {
             e.target.style.backgroundColor = '#E14545';
@@ -147,20 +145,8 @@ class App extends Component {
         });
     }
 
-    playAgain() {
-        this.setState({
-            turn: 0,
-            maxTurns: 0,
-            score: 0,
-            countriesArray: 'loading',
-            gameInProgress: false,
-            messageShown: false,
-            gameFinished: false
-        });
-    }
-
     render() {
-        console.log(this.state);
+
             return (
                 <div>
                     <div className="App">
@@ -173,7 +159,7 @@ class App extends Component {
                         </p>
                     </div>
                     { 
-                        this.state.gameFinished ? <ScoreBox score={this.state.score} handleClick={this.playAgain} maxTurns={this.state.maxTurns}/> :
+                        this.state.gameFinished ? <ScoreBox score={this.state.score} maxTurns={this.state.maxTurns}/> :
 
 
                         this.state.gameInProgress && this.state.countriesArray.length > 0 
