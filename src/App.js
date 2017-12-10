@@ -173,7 +173,7 @@ class App extends Component {
                         </p>
                     </div>
                     { 
-                        this.state.gameFinished ? <ScoreBox score={this.state.score} handleClick={this.playAgain}/> :
+                        this.state.gameFinished ? <ScoreBox score={this.state.score} handleClick={this.playAgain} maxTurns={this.state.maxTurns}/> :
 
 
                         this.state.gameInProgress && this.state.countriesArray.length > 0 
